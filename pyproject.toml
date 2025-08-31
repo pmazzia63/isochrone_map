@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "package_name"
+description = "Package description"
+version = "0.1.0"
+readme = "README.md"
+authors = [
+  { name = "name", email = "email.fr" }
+]
+requires-python = ">=3.9"
+dependencies = [
+  "numpy"
+]
+
+[tool.setuptools.packages.find]
+include = ["package_name*"]
+exclude = ["tests*"]
+
+[tool.setuptools.package-data]
+releases = ["*.md"]
